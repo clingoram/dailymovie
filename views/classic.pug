@@ -1,0 +1,31 @@
+extends layout
+
+block content
+   h1(class='type')= title
+   hr
+   table
+        thead
+            tr
+                th(data-field='id')
+                    .th-ineer 編號
+                th(data-field='nameEN')
+                    .th-inner 片名
+                th(data-field='nameTW')
+                    .th-inner 中文名
+                th(data-field='theyear')
+                    .th-inner 上映年分
+                th(data-field='director')
+                    .th-inner 導演
+                th(data-field='thecast')
+                    .th-inner 演員
+                th(data-field='summary')
+                    .th-inner 劇情大意
+            each user in items
+                tr
+                    td(style="padding:20px")=user.id
+                    td(style="padding:20px")=user.nameEN
+                    td(style="padding:20px")=user.nameTW
+                    td(style="padding:20px")=user.theyear
+                    td(style="padding:20px")=user.director
+                    td(style="padding:20px")=user.thecast
+                    td(style="padding:20px")=user.summary
