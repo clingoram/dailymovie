@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    
+  body
+    block content
+    div.nav
+        ul(class="nav nav-pills")
+            li#home 
+                a(href='/') Home
+            li#about 
+                a(href='/about') About
+            li(id='movies' class='dropdown' role='presentation')
+                a(class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")  Movies 
+                    span(class="caret")
+                ul(class="dropdown-menu")
+                    li#horror
+                        a(href="/horror") Horror 恐怖片
+                    li#action
+                        a(href="/action") Action 動作冒險
+                    li#love
+                        a(href='/fantasy') Fantasy 奇幻
+                    li#classic
+                        a(href='/classic') Classic 經典
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+    script(src='/javascripts/script.js')
