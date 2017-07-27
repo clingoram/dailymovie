@@ -1,2 +1,4 @@
 # dailymovie
-a simple website made by NodeJS and MySQL
+a simple website made by Express
+
+IDE: Visual Studio 2017
